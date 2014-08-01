@@ -42,6 +42,10 @@ Installation
   - panel to the left, 30px wide
   - applets: digital clock, task bar, volume control, application launch bar, resource monitors (CPU), resource monitors (RAM), system tray, menu
 - menu->preferences->customize look and feel->set up gnome icon theme
+- # download and install packer
+- https://aur.archlinux.org/packages/packer/ tar zxf, makepkg -s, pacman -U *xz
+- 
+- 
 
 TrackPoint Settings
 -------------------
@@ -52,9 +56,9 @@ http://www.thinkwiki.org/wiki/How_to_configure_the_TrackPoint
   - synclient TouchpadOff=1
   - xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Profile" "6"
   - xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Velocity Scaling" "1"
-  - xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" "0.5"
+  - xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" "0.2"
   - xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Adaptive Deceleration" "1"
   - xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Inertia" "1"
   - # xinput --watch-props "TPPS/2 IBM TrackPoint"
   - # xinput --test "TPPS/2 IBM TrackPoint"
-  - # xinput --list "TPPS/2 IBM TrackPoint"
+  - # xinput --list-props "TPPS/2 IBM TrackPoint"
