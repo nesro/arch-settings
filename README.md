@@ -40,7 +40,7 @@ Installation
 - startx # start lxde :)
 - set up LXDE
   - panel to the left, 30px wide
-  - applets: digital clock, task bar, volume control, application launch bar, resource monitors (+ RAM), system tray, menu
+  - applets: digital clock, task bar, volume control, application launch bar, resource monitors (CPU), resource monitors (RAM), system tray, menu
 - menu->preferences->customize look and feel->set up gnome icon theme
 
 TrackPoint Settings
