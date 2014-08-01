@@ -62,3 +62,10 @@ http://www.thinkwiki.org/wiki/How_to_configure_the_TrackPoint
   - # xinput --watch-props "TPPS/2 IBM TrackPoint"
   - # xinput --test "TPPS/2 IBM TrackPoint"
   - # xinput --list-props "TPPS/2 IBM TrackPoint"
+
+Mounting usb
+------------
+- mkdir -p /mnt/usb
+- vim /etc/fstab # add: /dev/sdb1 /mnt/usb vfat user,noauto,noatime,flush 0 0
+- mount /dev/sdb1 /mnt/usb
+- umount /mnt/usb
