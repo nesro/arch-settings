@@ -10,7 +10,6 @@ Program set
 - browser: chromium (+ vimium, g.lux, google dictionary, stay focused, tampermonkey, instant notification for gmail, adblock)
 - im: centerim
 - video: vlc
-- music: audacity
 - file manager: pcmanfm
 - sync: dropbox
 - encryption: encfs
