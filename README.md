@@ -33,7 +33,7 @@ Installation
 - visudo # uncomment: %wheel ALL=(ALL) ALL
 - exit
 - login as n
-- sudo pacman -S ttf-dejavu lxde gnome-icon-theme vim chromium xorg-xinit
+- sudo pacman -S ttf-dejavu lxde gnome-icon-theme vim chromium xorg-xinit scrot vlc
 - mkdir -p ~/.config/openbox && cp /etc/xdg/openbox/* ~/.config/openbox # copy openbox setting files
 - vim .bash_profile # add: if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
 - vim .xinitrc # add: exec startxlde
