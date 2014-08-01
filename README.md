@@ -44,8 +44,8 @@ Installation
 - menu->preferences->customize look and feel->set up gnome icon theme
 - # download and install packer
 - https://aur.archlinux.org/packages/packer/ tar zxf, makepkg -s, pacman -U *xz
-- 
-- 
+- packer -S chromium-libpdf dropbox
+- # enable libpdf in chromium extensions
 
 TrackPoint Settings
 -------------------
