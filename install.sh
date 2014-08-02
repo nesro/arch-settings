@@ -3,6 +3,7 @@
 
 # TODO: choice btw symlink and copy
 # TODO: make simplier
+# TODO: sudo for /etc ?
 
 set -vx
 
