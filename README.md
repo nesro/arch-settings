@@ -53,11 +53,14 @@ http://www.x.org/wiki/Development/Documentation/PointerAcceleration/
 http://www.thinkwiki.org/wiki/How_to_configure_the_TrackPoint
 
   - synclient TouchpadOff=1
-  - xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Profile" "6"
-  - xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Velocity Scaling" "1"
-  - xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" "0.2"
-  - xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Adaptive Deceleration" "1"
-  - xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Inertia" "1"
+  - xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
+  - xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
+  - xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
+  - # xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Profile" "6"
+  - # xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Velocity Scaling" "1"
+  - # xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" "0.2"
+  - # xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Adaptive Deceleration" "1"
+  - # xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Inertia" "1"
   - # xinput --watch-props "TPPS/2 IBM TrackPoint"
   - # xinput --test "TPPS/2 IBM TrackPoint"
   - # xinput --list-props "TPPS/2 IBM TrackPoint"
