@@ -7,7 +7,7 @@ Program set
 -----------
 
 - enviroment: lxde (openbox) (when stable, I want to use LXQt)
-- browser: chromium (+ vimium, g.lux, google dictionary, stay focused, tampermonkey, instant notification for gmail, adblock)
+- browser: chromium (+ vimium, g.lux, google dictionary, stay focused, tampermonkey, instant notification for gmail, adblock, theme: https://chrome.google.com/webstore/detail/black-frame/fbobkgncdnceioeamcbkjokeajockeil)
 - im: centerim
 - video: vlc
 - file manager: pcmanfm
