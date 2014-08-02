@@ -1,7 +1,7 @@
 arch-settings
 =============
 
-This will be (when finished) my cheatsheet how to install Arch Linux on my notebook (Lenovo Thinkpad Edge E330 3354-9RG,  Intel Core i3 2328M, 4GB RAM). Nothing serious or super geeky. If you find any mistakes, inaccuracies or possible improvements, I'll love from the bottom of my heart if you'll tell me.  
+This will be (when finished) my cheatsheet how to install Arch Linux on my notebook (Lenovo Thinkpad Edge E330 3354-9RG,  Intel Core i3 2328M, 4GB RAM). Nothing serious or super geeky. If you find any mistakes, inaccuracies or possible improvements, I'll love you from the bottom of my heart if you'll tell me.  
 
 Program set
 -----------
