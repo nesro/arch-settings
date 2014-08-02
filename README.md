@@ -8,7 +8,7 @@ Program set
 
 - enviroment: lxde (openbox) (when stable, I want to use LXQt)
 - browser: chromium (+ vimium, g.lux, google dictionary, stay focused, tampermonkey, instant notification for gmail, adblock, theme: https://chrome.google.com/webstore/detail/black-frame/fbobkgncdnceioeamcbkjokeajockeil)
-- im: centerim
+- im: pidgin
 - video: vlc
 - file manager: pcmanfm
 - sync: dropbox
@@ -20,7 +20,7 @@ Installation
 - set up wifi (wlp2s0)
 - set up timezone Europe/Prague, sync with ntpd
 - autoprepare storage (swap 1024MB, Ext 4)
-- sources: no testing, mirror nic.cz, yes extra, packages: base-devel, xorg*, and then wpa_supplicant, sudo
+- sources: no testing, mirror nic.cz, yes extra, packages: base-devel, xorg*, and then sudo , wpa_supplicant, dialog
 - set up hostname to "arch" and set up the root password
 - install grub and write to the config file: set timeout="1"
 - reboot
@@ -32,17 +32,17 @@ Installation
 - visudo # uncomment: %wheel ALL=(ALL) ALL
 - exit
 - login as n
-- sudo pacman -S ttf-dejavu ttf-freefont lxde gnome-icon-theme vim chromium xorg-xinit scrot centerim libva-intel-driver vlc
+- sudo pacman -S ttf-dejavu ttf-freefont lxde gnome-icon-theme vim chromium xorg-xinit scrot libva-intel-driver vlc leafpad pulseaudio-alsa openconnect pidgin python2-dbus p7zip encfs
 - mkdir -p ~/.config/openbox && cp /etc/xdg/openbox/* ~/.config/openbox # copy openbox setting files
-- vim .bash_profile # add: if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
-- vim .xinitrc # add: exec startxlde
+- echo "if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi" >> ~/.bash_profile
+- echo "exec startxlde" >> ~/.xinitrc
 - startx # start lxde :)
 - set up LXDE
   - panel to the left, 30px wide
   - applets: digital clock, task bar, volume control, application launch bar, resource monitors (CPU), resource monitors (RAM), system tray, menu
 - menu->preferences->customize look and feel->set up gnome icon theme
 - https://aur.archlinux.org/packages/packer/ tar zxf, makepkg -s, pacman -U *xz # install packer
-- packer -S chromium-libpdf dropbox
+- packer -S chromium-libpdf chromium-pepper-flash dropbox
 - ln -s ~/Dropbox/ d # create a symlink to dropbox
 
 TrackPoint Settings
