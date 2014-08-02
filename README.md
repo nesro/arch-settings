@@ -41,10 +41,9 @@ Installation
   - panel to the left, 30px wide
   - applets: digital clock, task bar, volume control, application launch bar, resource monitors (CPU), resource monitors (RAM), system tray, menu
 - menu->preferences->customize look and feel->set up gnome icon theme
-- # download and install packer
-- https://aur.archlinux.org/packages/packer/ tar zxf, makepkg -s, pacman -U *xz
+- https://aur.archlinux.org/packages/packer/ tar zxf, makepkg -s, pacman -U *xz # install packer
 - packer -S chromium-libpdf dropbox
-- # enable libpdf in chromium extensions
+- ln -s ~/Dropbox/ d # create a symlink to dropbox
 
 TrackPoint Settings
 -------------------
