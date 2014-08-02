@@ -32,7 +32,7 @@ Installation
 - visudo # uncomment: %wheel ALL=(ALL) ALL
 - exit
 - login as n
-- sudo pacman -S ttf-dejavu ttf-freefont lxde gnome-icon-theme vim chromium xorg-xinit scrot libva-intel-driver vlc leafpad pulseaudio-alsa openconnect pidgin python2-dbus p7zip encfs
+- sudo pacman -S ttf-dejavu ttf-freefont lxde gnome-icon-theme vim chromium xorg-xinit scrot libva-intel-driver vlc leafpad pulseaudio-alsa openconnect pidgin python2-dbus p7zip encfs alsa-utils alsa-oss ntfs-3g
 - mkdir -p ~/.config/openbox && cp /etc/xdg/openbox/* ~/.config/openbox # copy openbox setting files
 - echo "if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi" >> ~/.bash_profile
 - echo "exec startxlde" >> ~/.xinitrc
