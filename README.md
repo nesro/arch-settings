@@ -44,6 +44,7 @@ Installation
 - https://aur.archlinux.org/packages/packer/ tar zxf, makepkg -s, pacman -U *xz # install packer
 - packer -S chromium-libpdf chromium-pepper-flash dropbox
 - ln -s ~/Dropbox/ d # create a symlink to dropbox
+- sudo alsactl store # set up 30 % volume in alsamixer and run this
 
 TrackPoint Settings
 -------------------
