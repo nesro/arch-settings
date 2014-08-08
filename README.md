@@ -45,6 +45,7 @@ Installation
 - packer -S chromium-libpdf chromium-pepper-flash dropbox
 - ln -s ~/Dropbox/ d # create a symlink to dropbox
 - sudo alsactl store # set up 30 % volume in alsamixer and run this
+- systemctl enable netctl-auto@wlp2s0.service
 
 TrackPoint Settings
 -------------------
