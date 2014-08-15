@@ -28,14 +28,27 @@ Installation
 - pacman -Syy # force refresh all package lists
 - pacman -Syu
 - useradd -m -G wheel -s /bin/bash n # set up my user
+- gpasswd -a n network
 - passwd n
-- visudo # uncomment: %wheel ALL=(ALL) ALL
+- visudo # uncomment: "%wheel ALL=(ALL) ALL" and "%wheel ALL=(ALL) NOPASSWD: ALL"
 - exit
 - login as n
-- sudo pacman -S ttf-dejavu ttf-freefont lxde gnome-icon-theme vim chromium xorg-xinit scrot libva-intel-driver vlc leafpad pulseaudio-alsa openconnect pidgin python2-dbus p7zip encfs alsa-utils alsa-oss ntfs-3g pavucontrol file-roller openssh wpa_actionid
+
+        sudo pacman -S ttf-dejavu ttf-freefont \
+        lxde gnome-icon-theme vim chromium \
+        xorg-xinit scrot libva-intel-driver \
+        vlc leafpad pulseaudio-alsa openconnect \
+        pidgin python2-dbus p7zip encfs alsa-utils \
+        alsa-oss ntfs-3g pavucontrol file-roller \
+        openssh wpa_actionid networkmanager \
+        network-manager-applet xfce4-notifyd \
+        network-manager-applet crda \
+        wireless-regdb gamin acpi \
+        xfce4-power-manager
+
 - mkdir -p ~/.config/openbox && cp /etc/xdg/openbox/* ~/.config/openbox # copy openbox setting files
 - echo "if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi" >> ~/.bash_profile
-- echo "exec startxlde" >> ~/.xinitrc
+- echo "exec dbus-launch startxlde" >> ~/.xinitrc
 - startx # start lxde :)
 - set up LXDE
   - panel to the left, 30px wide
@@ -45,9 +58,39 @@ Installation
 - packer -S chromium-libpdf chromium-pepper-flash dropbox
 - ln -s ~/Dropbox/ d # create a symlink to dropbox
 - sudo alsactl store # set up 30 % volume in alsamixer and run this
-- systemctl enable netctl-auto@wlp2s0.service
+- #
 
-TrackPoint Settings
+        sudo cat >/etc/polkit-1/rules.d/50-org.freedesktop.NetworkManager.rules <<__HEREDOC__
+        polkit.addRule(function(action, subject) {
+                if (action.id.indexOf("org.freedesktop.NetworkManager.") == 0 && subject.isInGroup("network")) {
+                        return polkit.Result.YES;
+                }
+        });
+        __HEREDOC__
+
+- sudo systemctl enable NetworkManager.service
+- sudo systemctl disable dhcpcd.service
+- sudo systemctl disable dhcpcd@.service
+- sudo systemctl stop dhcpcd.service
+- sudo systemctl stop dhcpcd@.service
+- sudo systemctl enable wpa_supplicant.service
+- sudo ip link set down wlp2s0
+- sudo systemctl start wpa_supplicant.service
+- sudo systemctl start NetworkManager.service
+- sudo systemctl start NetworkManager-wait-online.service
+
+        cat > /usr/bin/nesro_trackpoint_settings <<__HEREDOC__
+        #!/bin/bash
+        echo -n 255 > /sys/devices/platform/i8042/serio1/serio2/speed
+        echo -n 255 > /sys/devices/platform/i8042/serio1/serio2/sensitivity
+        __HEREDOC__
+
+        cat >>~/.config/lxsession/LXDE/autostart <<__HEREDOC__
+        @sudo nesro_trackpoint_settings
+        @synclient TouchpadOff=1
+        __HEREDOC__
+
+TrackPoint Settings (old)
 -------------------
 
 http://www.x.org/wiki/Development/Documentation/PointerAcceleration/
