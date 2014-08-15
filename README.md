@@ -25,8 +25,7 @@ Installation
 - install grub and write to the config file: set timeout="1"
 - reboot
 - netctl start wlp2s0-wireless-something #set up wifi
-- pacman -Syy # force refresh all package lists
-- pacman -Syu
+- pacman -Syyu # force refresh all package lists and update
 - useradd -m -G wheel -s /bin/bash n # set up my user
 - gpasswd -a n network
 - passwd n
