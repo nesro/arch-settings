@@ -54,7 +54,7 @@ Installation
   - applets: digital clock, task bar, volume control, application launch bar, resource monitors (CPU), resource monitors (RAM), system tray, menu
 - menu->preferences->customize look and feel->set up gnome icon theme
 - https://aur.archlinux.org/packages/packer/ tar zxf, makepkg -s, pacman -U *xz # install packer
-- packer -S chromium-libpdf chromium-pepper-flash dropbox
+- packer -S chromium-libpdf chromium-pepper-flash dropbox jdownloader shellcheck
 - ln -s ~/Dropbox/ d # create a symlink to dropbox
 - sudo alsactl store # set up 30 % volume in alsamixer and run this
 - #
