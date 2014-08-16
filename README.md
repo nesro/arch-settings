@@ -6,7 +6,7 @@ This will be (when finished) my cheatsheet how to install Arch Linux on my noteb
 Program set
 -----------
 
-- enviroment: lxde (openbox) (when stable, I want to use LXQt)
+- environment: lxde (openbox) (when stable, I want to use LXQt)
 - browser: chromium (+ vimium, g.lux, google dictionary, stay focused, tampermonkey, instant notification for gmail, adblock, theme: https://chrome.google.com/webstore/detail/black-frame/fbobkgncdnceioeamcbkjokeajockeil)
 - im: pidgin
 - video: vlc
