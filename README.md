@@ -43,7 +43,7 @@ Installation
         network-manager-applet xfce4-notifyd \
         network-manager-applet crda \
         wireless-regdb gamin acpi \
-        xfce4-power-manager
+        xfce4-power-manager audacious
 
 - mkdir -p ~/.config/openbox && cp /etc/xdg/openbox/* ~/.config/openbox # copy openbox setting files
 - echo "if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi" >> ~/.bash_profile
