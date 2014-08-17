@@ -1,4 +1,25 @@
-set nu
+" https://github.com/nesro/arch-settings
+
+" alt hjkl to switch between windows
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
+"-------------------------------------------------------------------------------
+
+set list
+set listchars+=extends:+
+set listchars+=tab:\|\-
+set listchars+=trail:-
+set listchars+=eol:$
+
+
+"-------------------------------------------------------------------------------
+
+
+
+		set nu
 set mouse=a
 hi statusline guibg=green
 

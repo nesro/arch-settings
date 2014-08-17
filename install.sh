@@ -1,23 +1,49 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # https://github.com/nesro/arch-settings
 
-# TODO: choice btw symlink and copy
-# TODO: make simplier
-# TODO: sudo for /etc ?
+# this script is not complete. I will automate steps from readme here. (one day)
 
-set -vx
+set -o nounset
+set -o errexit
+set -o pipefail
 
-REPO=${1:-~/Dropbox/github/arch-settings}
+#-------------------------------------------------------------------------------
 
-function symlink {
-	from=$1
-	to=$2
+BACKUP_DIR=~/arch-settings-backup
 
-	mv $to arch-settings-bak_${to}_$$
-	ln -s $from $to
+#-------------------------------------------------------------------------------
+
+usage() {
+	echo "todo usage"
 }
 
-symlink $REPO/.bashrc ~/.bashrc
-symlink $REPO/trackpoint.conf /etc/tmpfiles.d/trackpoint.conf
 
-set +vx
+
+
+parse_opts() {
+	while getopts ":a:" opt; do
+		case $opt in
+		a)
+			echo "-a was triggered, Parameter: $OPTARG" >&2
+			;;
+		\?)
+			echo "Invalid option: -$OPTARG" >&2
+			exit 1
+			;;
+		:)
+			echo "Option -$OPTARG requires an argument." >&2
+			exit 1
+			;;
+		esac
+	done
+}
+
+main() {
+	parse_opts "$@"
+}
+
+#-------------------------------------------------------------------------------
+
+main "$@"
+
+#-------------------------------------------------------------------------------

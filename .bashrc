@@ -4,7 +4,7 @@
 
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+PS1='[\u@\H: \w |\t|$?]\$\n'
 
 alias diff='colordiff'
 alias grep='grep --color=auto'
@@ -44,6 +44,7 @@ alias lm='la | more'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -I'
+
 # safer alternative w/ timeout, not stored in history
 alias rm=' timeout 3 rm -Iv --one-file-system'
 alias ln='ln -i'
@@ -52,3 +53,5 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 alias cls=' echo -ne "\033c"'
 
+# this is not vim :D
+alias :q='exit'
